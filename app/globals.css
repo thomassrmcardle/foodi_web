@@ -42,3 +42,7 @@ h2 {
 p {
   opacity: 0.9;
 }
+
+ol {
+  list-style-type: decimal;
+}

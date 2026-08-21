@@ -45,8 +45,8 @@ export default function Home() {
 
             </div>
 
-            <p>{'Document Version: 1'}</p>
-            <p style={{marginTop: 16}}>{'Last Update: [NEW_DATE]'}</p>
+            <p style={{marginTop: 16}}>{'Document Version: 1'}</p>
+            <p>{'Last Update: [NEW_DATE]'}</p>
 
         </main>
         </div>
