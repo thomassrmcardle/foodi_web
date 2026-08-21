@@ -3,16 +3,9 @@
 import Head from 'next/head'
 import { useParams } from 'next/navigation'
 
-export async function generateStaticParams() {
-    const posts = await fetch('https://.../posts').then((res) => res.json())
- 
-    return posts.map((post : any) => ({
-        recipe_id: post.recipe_id,
-    }))
-}
-
-export default async function Page({params}: {params: Promise<{recipe_id: string}>}) {
-    const { recipe_id } = await params
+export default function Page() {
+    const params = useParams()
+    const recipe_id = params.recipe_id
 
     return (
         <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
