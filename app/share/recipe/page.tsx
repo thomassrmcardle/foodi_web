@@ -1,11 +1,11 @@
 "use client"
 
 import Head from 'next/head'
-import { useParams } from 'next/navigation'
+import { useSearchParams } from "next/navigation";
 
 export default function Page() {
-    const params = useParams()
-    const recipe_id = params.recipe_id
+    const params = useSearchParams()
+    const recipe_id = params.get('id')
 
     return (
         <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
