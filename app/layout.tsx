@@ -29,7 +29,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <nav>
         <a href="/">{'[LOGO]'}</a>
-        <a href="/privacy">Privacy Policy</a>
+        <a href="/policies/terms">Terms of Use</a>
+        <a href="/policies/privacy">Privacy Policy</a>
       </nav>
       <body className="min-h-full flex flex-col">{children}</body>
       <footer>
