@@ -1,3 +1,5 @@
+"use client"
+
 import Head from 'next/head'
 import { useParams } from 'next/navigation'
 
