@@ -12,7 +12,7 @@ export default function Home() {
         <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
         <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
             <div>
-                <h1 className="text-3xl">Terms of Service</h1>
+                <h1 className="text-3xl">Terms of Use</h1>
 
                 <h2>Agreement</h2>
                 <p>Upon creating an account on the foodi platform, all users must have agreed to adhere to the following policies regarding the usage of the platform and user behaviour. If these policies are not followed, appropriate action may be taken by the relevant individuals of the Foodi Team accordingly.</p>

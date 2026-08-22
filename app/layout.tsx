@@ -35,6 +35,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col">{children}</body>
       <footer>
         <p>This will be a footer.</p>
+        <div className="flex-wrap-row">
+          <div>
+            <a href="/policies/terms">Terms of Use</a>
+            <a href="/policies/privacy">Privacy Policy</a>
+          </div>
+        </div>
       </footer>
     </html>
   );

@@ -22,7 +22,7 @@
 nav {
   display: flex;
   width: 100%;
-  gap: 8;
+  gap: 16;
   padding: 24;
 }
 
@@ -33,16 +33,35 @@ body {
   margin: 0;
 }
 
+footer {
+  padding: 24;
+  justify-content: center;
+}
+
 h2 {
-  font-weight: 'bold';
+  font-weight: 600;
   font-size: var(--text-lg);
   margin-top: 16;
 }
 
 p {
   opacity: 0.9;
+  margin-top: 4;
 }
 
 ol {
   list-style-type: decimal;
+  padding-left: 36;
+  padding-top: 12;
+  padding-bottom: 12;
+}
+
+li {
+  opacity: 0.9;
+  margin-bottom: 8;
+}
+
+.flex-wrap-row {
+  display: flex;
+  flex-wrap: wrap;
 }
