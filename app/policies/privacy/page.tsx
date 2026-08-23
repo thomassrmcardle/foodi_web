@@ -17,6 +17,13 @@ export default function Home() {
             <h2>About Foodi</h2>
             <p>Foodi is a mobile and web application, design to aid users in the process of cooking food through the use of step by step instructions and built in amenities. Built with a global database of user generated recipes, the experience is designed for convenience.</p>
         
+            <h2>Profile Data</h2>
+            <p>Upon signing up for the platform, some information is required about each user. Some of this data may be used to restrict features as necessary by law as reflected within our <a href="../terms">Terms of Use</a>. The following is a list of collected data from the onboarding process and how it is used.</p>
+            <ol>
+              <li>Each user is asked to give a name to be referred as. This is not required to be their legal name. The name provided will be used for personalisation within the app, and if the user is over the age of 16, it will be publically visible on their profile if their profile is made "public".</li>
+              <li>Every user is required to give an accurate date of birth. This is used to meet legal requirements to restrict users from specific features (when necessary) depending on the user's age group. You can find out more about these restrictions within our <a href="../terms">Terms of Use</a> document.</li>
+            </ol>
+
             <h2>Data Collection</h2>
             <p>As agreed upon by users in the agreement to the policies of this document, any data submitted by the user within the platform can be saved and stored. This includes the following...</p>
             <ol>
@@ -24,7 +31,6 @@ export default function Home() {
                 <li>For each of the recipes which are "saved" by users, allowing ease of access, a record is stored of this, associating the connection between the user and the recipe. This data is removed when the user "unsaves" the recipe, or alternatively when the user's data is removed.</li>
                 <li>Individual text entries submitted within the platform's search feature are stored. This is used to rank the frequency of the usage of search terms by users.</li>
             </ol>
-            
 
             <h2>Data Usage</h2>
             <p>All personal data, including the username and email address of each user, is kept confidential, only being shown to the corresponding users when signed in.</p>

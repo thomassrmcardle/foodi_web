@@ -34,9 +34,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       </nav>
       <body className="min-h-full flex flex-col">{children}</body>
       <footer>
-        <p>This will be a footer.</p>
+        <p>Foodi can be downloaded on the iOS App Store</p>
         <div className="flex-wrap-row">
-          <div>
+          <div className="nav-column">
             <a href="/policies/terms">Terms of Use</a>
             <a href="/policies/privacy">Privacy Policy</a>
           </div>

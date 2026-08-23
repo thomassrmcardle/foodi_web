@@ -61,7 +61,17 @@ li {
   margin-bottom: 8;
 }
 
+.text-centre {
+  text-align: center;
+}
+
 .flex-wrap-row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav-column {
+  flex-direction: column;
+  flex-wrap: nowrap;
 }
