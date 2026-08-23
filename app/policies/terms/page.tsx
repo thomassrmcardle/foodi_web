@@ -49,9 +49,12 @@ export default function Home() {
 
                 <h2>Plus Subscription</h2>
                 <p>The "plus" subscription is designed to provide additional features to users of the platform. This can be subscribed to for a monthly, automatically recurring fee within the platform.</p>
-                <p>This subscription can be cancelled at any time from within the application under the "settings" section of the application. This will remove access to the features included in the subscription. However, data associated to these features will not be deleted at this time, only under the events or conditions listed in our <a href="../privacy">Privacy Policy</a>.</p>
+                <p>This subscription can be cancelled at any time from within the application under the "settings" section of the application. This will remove access to the features included in the subscription. However, data associated to these features will not be deleted at this time, only under the events or conditions listed in our <a href="../policies/privacy">Privacy Policy</a>.</p>
                 <p>Upon the deletion of an account, any subscription associated to that account will be cancelled. If this does not occur and charges continue to be made, please contatct the foodi team with the following email address and explain the situation and we will attempt to resolve it in due course.</p>
                 <p>{"[email]"}</p>
+
+                <h2>Moderation</h2>
+                <p>{"ADD INFO ABOUT MODERATION AND PROCESS HERE"}</p>
 
                 <h2>Policy Enforcement</h2>
                 <p>If these expectations are not met, the appropriate members of the Foodi Team hold the ability to take appropriate action. However, the action taken depends on the deemed "severity" of such a violation.</p>

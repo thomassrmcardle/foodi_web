@@ -37,8 +37,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <p>Foodi can be downloaded on the iOS App Store</p>
         <div className="flex-wrap-row">
           <div className="nav-column">
-            <a href="/policies/terms">Terms of Use</a>
-            <a href="/policies/privacy">Privacy Policy</a>
+            <div><a href="/policies/terms">Terms of Use</a></div>
+            <div><a href="/policies/privacy">Privacy Policy</a></div>
           </div>
         </div>
       </footer>
