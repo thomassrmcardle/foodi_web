@@ -18,10 +18,10 @@ export default function Home() {
             <p>Foodi is a mobile and web application, design to aid users in the process of cooking food through the use of step by step instructions and built in amenities. Built with a global database of user generated recipes, the experience is designed for convenience.</p>
         
             <h2>Profile Data</h2>
-            <p>Upon signing up for the platform, some information is required about each user. Some of this data may be used to restrict features as necessary by law as reflected within our <a href="../terms">Terms of Use</a>. The following is a list of collected data from the onboarding process and how it is used.</p>
+            <p>Upon signing up for the platform, some information is required about each user. Some of this data may be used to restrict features as necessary by law as reflected within our <a href="../policies/terms">Terms of Use</a>. The following is a list of collected data from the onboarding process and how it is used.</p>
             <ol>
               <li>Each user is asked to give a name to be referred as. This is not required to be their legal name. The name provided will be used for personalisation within the app, and if the user is over the age of 16, it will be publically visible on their profile if their profile is made "public".</li>
-              <li>Every user is required to give an accurate date of birth. This is used to meet legal requirements to restrict users from specific features (when necessary) depending on the user's age group. You can find out more about these restrictions within our <a href="../terms">Terms of Use</a> document.</li>
+              <li>Every user is required to give an accurate date of birth. This is used to meet legal requirements to restrict users from specific features (when necessary) depending on the user's age group. You can find out more about these restrictions within our <a href="../policies/terms">Terms of Use</a> document.</li>
             </ol>
 
             <h2>Data Collection</h2>

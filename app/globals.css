@@ -3,6 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --accent: #6dffa0;
 }
 
 @theme inline {
@@ -26,6 +27,11 @@ nav {
   padding: 24;
 }
 
+nav a {
+  color: var(--foreground);
+  text-decoration: none;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -47,6 +53,12 @@ h2 {
 p {
   opacity: 0.9;
   margin-top: 4;
+}
+
+a {
+  font-weight: bold;
+  text-decoration: underline;
+  color: var(--accent);
 }
 
 ol {

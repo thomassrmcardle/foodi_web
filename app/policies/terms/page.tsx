@@ -21,7 +21,7 @@ export default function Home() {
                 <p>Due to the nature of the application, we require the account of each user to have an accurate declared date of birth to meet legal requirements in restricting certain features from specific age groups, and we opperate the application under this assumption.</p>
                 <p>Users under the age of 16 are restricted from the following features...</p>
                 <ol>
-                    <li>Profiles of users under the age of 16 cannot be made "public". This means that details such as their name and profile picture cannot be shared with individuals. The only exception of this is any other users who are within the same "family" within the "Plus" subscription as described in this documnent.</li>
+                    <li>Profiles of users under the age of 16 cannot be made "public". This means that details such as their name and profile picture cannot be shared with individuals. The only exception of this is any other users who are within the same "family" within the "Plus" subscription as described in this document.</li>
                     <li>The ability to post recipes publically is limited for users under the age of 16. Users below this age can save recipes privately, but cannot share these publically.</li>
                 </ol>
 
