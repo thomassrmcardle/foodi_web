@@ -22,6 +22,8 @@ export default function Home() {
             <ol>
               <li>Each user is asked to give a name to be referred as. This is not required to be their legal name. The name provided will be used for personalisation within the app, and if the user is over the age of 16, it will be publically visible on their profile if their profile is made "public".</li>
               <li>Every user is required to give an accurate date of birth. This is used to meet legal requirements to restrict users from specific features (when necessary) depending on the user's age group. You can find out more about these restrictions within our <a href="../policies/terms">Terms of Use</a> document.</li>
+              <li>An email address is required for each user. Each email address can only be linked to one account. This address may be used to contact the user where necessary, whether by the Foodi Team directly, or by automatically processes within the platform's functionality.</li>
+              <li>All Foodi accounts require a password to keep the associated information secure. Every password is encrypted within our database for the purpose of user privacy and account safety. For information on how to change your password or how to recover an account, please see our <a href="../policies/terms">Terms of Use</a> for advice.</li>
             </ol>
 
             <h2>Data Collection</h2>

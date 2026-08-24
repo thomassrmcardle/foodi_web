@@ -24,24 +24,38 @@ export default function Home() {
                     <li>Profiles of users under the age of 16 cannot be made "public". This means that details such as their name and profile picture cannot be shared with individuals. The only exception of this is any other users who are within the same "family" within the "Plus" subscription as described in this document.</li>
                     <li>The ability to post recipes publically is limited for users under the age of 16. Users below this age can save recipes privately, but cannot share these publically.</li>
                 </ol>
+                <p>For users under the age of 16 who wish to connect with family members, we reccomend the usage of the "Families" feature for those subscribed to the "Plus" subscription. This allows for users under the age of 16 to share recipes with family members without exposing their own details publically.</p>
+                <p>For more information on how the data of users is used, please see our <a href="../policies/privacy">Privacy Policy</a>.</p>
+
+                <h2>Account Management</h2>
+                <p>We reccomend each person who uses the Foodi platform has their own personal account for the sake of the privacy of their information and for a greater experience while using the platform.</p>
+                <p>In the event that details for an account are lost, we reccomend that users follow the following steps:</p>
+                <ol>
+                    <li>Go on to the Foodi platform and navigate to the "Log In" screen.</li>
+                    <li>Tap or click on the option "Forgot Password". This is likely to be located towards the bottom of the screen.</li>
+                    <li>Input the email address linked to the account you are trying to recover. If you cannot remember which address you used, you may want to try multiple addresses.</li>
+                    <li>If an email address linked to an account is provided, an email will be sent to that account to change it's password. The link on that email must be opened. This will show a page where the user will be able to change the password of the account.</li>
+                </ol>
+                <p>Notably, we reccomend users not to share the details of their passwords with other individuals as this may provide them with access to your account. To help suser protect against such threats, the following is a list of actions the Foodi Team will never conduct.</p>
+                <ol>
+                    <li>Users will never be asked to share the password to an account they have created.</li>
+                    <li>No member of the Foodi Team will ever request access to another user's account.</li>
+                </ol>
 
                 <h2>Publishing Media</h2>
-                <p>All images published to the Foodi platform must be respectful, not containing any profanity and inappropriate content. The following is a list of prohibitted content of such media...</p>
+                <p>All images published to the Foodi platform must be respectful, not containing any profanity and inappropriate content. The following is a list of prohibitted content of such media (within both text and images)...</p>
                 <ol>
                     <li>Media which may cause harm or distress to other individuals. This includes hate speech, derogatory media, and graphic content depicting gore or violence.</li>
                     <li>Any form of profanity, including nudity, swear words, or the disrespect of a faith or belief.</li>
                     <li>Politically motivated media, or any media promoting, criticising or discussing politics is not allowed.</li>
                     <li>Religious imagery should be avoided when possible. However, we do recognise this may not be applicable under specific circumstances. Images of people wearing religious clothing are allowed, but any iconography or imagery strongly corrolated to a specific faith should be avoided where possible.</li>
-                </ol>
-                <p>Likewise, similar standards are expected to be followed within the text content published to the platform. This includes all text fields within the content of recipes, and the content of other platform features such as user profiles and planning features such as meal planning. The following content is not allowed within any text content...</p>
-                <ol>
-                    <li>Hate speech is not tolerated. This includes racist, homophobic, transphobic language etc.</li>
-                    <li>The discussion of any form of profanity is prohibited.</li>
-                    <li>No swear words or slurs should be used.</li>
-                    <li>Politics should not be discussed. This includes any message, no matter whether it is supportive, critical, or informative of the topic.</li>
-                    <li>No beliefs or faiths should be promoted or criticised. The discussion of a faith in connection to a relevant topic to the site is allowed. For example, a dish may be described as "halal" in its description.</li>
+                    <li>No media should be used for the purpose of the promotion of a third party product not produced by Foodi. Likewise, content should not encourage the sale or purchase of any products, nor should it promise any finanical benefits to users. Please note that stating the need of a household name product is exempt from this rule. For example, the statement "This recipe requires Nutella" does not violate this policy as it lists an ingredient necessary for a recipe.</li>
                 </ol>
                 <p>Furthermore, any content deemed illegal, or a violation of a person's privacy will be removed.</p>
+                
+                <h2>Copyright</h2>
+                <p>The unlawful use of copyrighted material on the platform violates our policies, and the detection of such content will result in it's removal.</p>
+                <p>As per our <a href="../policies/privacy">Privacy Policy</a>, by agreeing to these terms, users allow the usage of content which they upload to Foodi by the Foodi Team for marketing purposes beyond the platform itself.</p>
 
                 <h2>Frauds and Scams</h2>
                 <p>Any misleading content is prohibited on the platform. Particularly that which promises any financial benefit.</p>
@@ -54,7 +68,8 @@ export default function Home() {
                 <p>{"[email]"}</p>
 
                 <h2>Moderation</h2>
-                <p>{"ADD INFO ABOUT MODERATION AND PROCESS HERE"}</p>
+                <p>All content uploaded to the platform is moderated by the Foodi Team. Any content found to be in violation of our policies may be removed. For more information, please see the Policy Enforcement section.</p>
+                <p>We request that if users find any content they believe is in violation of our policies, that they report it to the Foodi Team using in inbuilt report feature. This will create a ticket for the content to be re-reviewed by our team, in which appropriate action will be taken if deemed necessary.</p>
 
                 <h2>Policy Enforcement</h2>
                 <p>If these expectations are not met, the appropriate members of the Foodi Team hold the ability to take appropriate action. However, the action taken depends on the deemed "severity" of such a violation.</p>

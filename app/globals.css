@@ -87,3 +87,8 @@ li {
   flex-direction: column;
   flex-wrap: nowrap;
 }
+
+
+.section-img {
+  width: 500px;
+}
