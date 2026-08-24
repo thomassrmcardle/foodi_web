@@ -29,28 +29,30 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <nav className="items-center">
-        <a href="/">
-          <Image
-            className="nav-logo"
-            alt="Cherub Logo Icon"
-            src="/Cherub_Logo.png"
-            height={40}
-          />
-        </a>
-        <a href="/policies/terms">Terms of Use</a>
-        <a href="/policies/privacy">Privacy Policy</a>
-      </nav>
-      <body className="min-h-full flex flex-col">{children}</body>
-      <footer>
-        <p>Foodi can be downloaded on the iOS App Store</p>
-        <div className="flex-wrap-row">
-          <div className="nav-column">
-            <div><a href="/policies/terms">Terms of Use</a></div>
-            <div><a href="/policies/privacy">Privacy Policy</a></div>
+      <body className="min-h-full flex flex-col">
+        <nav className="items-center">
+          <a href="/">
+            <Image
+              className="nav-logo"
+              alt="Cherub Logo Icon"
+              src="/Cherub_Logo.png"
+              height={40}
+            />
+          </a>
+          <a href="/policies/terms">Terms of Use</a>
+          <a href="/policies/privacy">Privacy Policy</a>
+        </nav>
+        {children}
+        <footer>
+          <p>Foodi can be downloaded on the iOS App Store</p>
+          <div className="flex-wrap-row">
+            <div className="nav-column">
+              <div><a href="/policies/terms">Terms of Use</a></div>
+              <div><a href="/policies/privacy">Privacy Policy</a></div>
+            </div>
           </div>
-        </div>
-      </footer>
+        </footer>
+      </body>
     </html>
   );
 }
