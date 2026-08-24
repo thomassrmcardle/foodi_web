@@ -97,6 +97,9 @@ li {
   flex-wrap: nowrap;
 }
 
+.nav-logo {
+  height: 40;
+}
 
 .section-img {
   min-width: 200px;

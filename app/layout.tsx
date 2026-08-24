@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+import Image from "next/image";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -28,7 +30,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <nav>
-        <a href="/">{'[LOGO]'}</a>
+        <a href="/">
+          <Image className="nav-logo" alt="Cherub Logo Icon" src="Cherub_Logo.png" />
+        </a>
         <a href="/policies/terms">Terms of Use</a>
         <a href="/policies/privacy">Privacy Policy</a>
       </nav>
