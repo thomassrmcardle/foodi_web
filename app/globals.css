@@ -99,5 +99,5 @@ li {
 
 
 .section-img {
-  width: 500px;
+  min-width: 200px;
 }
