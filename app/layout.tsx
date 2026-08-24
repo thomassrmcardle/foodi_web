@@ -37,6 +37,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               alt="Cherub Logo Icon"
               src="/Cherub_Logo.png"
               priority
+              unoptimized // File path fix
             />
           </a>
           <a href="/policies/terms">Terms of Use</a>
