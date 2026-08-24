@@ -23,7 +23,7 @@
 nav {
   display: flex;
   width: 100%;
-  gap: 16;
+  gap: 24;
   padding: 24;
 }
 
@@ -73,8 +73,8 @@ li {
   margin-bottom: 8;
 }
 
-.gap-16 {
-  gap: 16;
+.gap-28 {
+  gap: 28;
 }
 
 .mv-12 {
@@ -98,7 +98,7 @@ li {
 }
 
 .nav-logo {
-  height: 40;
+  height: 56;
 }
 
 .section-img {

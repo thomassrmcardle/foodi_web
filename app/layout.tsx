@@ -15,10 +15,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Foodi',
+  title: 'Cherub',
   description: "Recipes made simple. With an expansive catgeory from around the world. Find what you're craving and make it with easy.",
   twitter: {
-    title: 'Foodi',
+    title: 'Cherub',
     description: "Recipes made simple. With an expansive catgeory from around the world. Find what you're craving and make it with easy.",
   }
 };

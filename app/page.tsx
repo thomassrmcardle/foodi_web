@@ -14,7 +14,7 @@ export default function Home() {
 
   function DownloadLinks() {
     return <div className="flex flex-col mb-12 w-full items-center" style={{paddingTop: 16, paddingBottom: 4}}>
-      <h2>Download Now</h2>
+      <h2>Download Cherub Now</h2>
       <p>[Download links will go here...]</p>
     </div>
   }
@@ -30,21 +30,21 @@ export default function Home() {
         <DownloadLinks />
 
         <div className="max-w-3xl">
-          <div className="mb-12 flex flex-row flex-wrap-row gap-16">
+          <div className="mb-12 flex flex-row flex-wrap-row gap-28">
             <Placeholder />
             <div className="justify-center flex flex-col flex-1">
               <h2>Cook</h2>
               <p>With a recipe system built around cooking</p>
             </div>
           </div>
-          <div className="mb-12 flex flex-row flex-wrap-row gap-16">
+          <div className="mb-12 flex flex-row flex-wrap-row gap-28">
             <div className="justify-center flex flex-col flex-1">
               <h2>Discover</h2>
               <p>From a library of 100s of recipes</p>
             </div>
             <Placeholder />
           </div>
-          <div className="mb-12 flex flex-row flex-wrap-row gap-16">
+          <div className="mb-12 flex flex-row flex-wrap-row gap-28">
             <Placeholder />
             <div className="justify-center flex flex-col flex-1">
               <h2>Share</h2>
