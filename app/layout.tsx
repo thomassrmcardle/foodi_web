@@ -29,9 +29,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <nav>
+      <nav className="items-center">
         <a href="/">
-          <Image className="nav-logo" alt="Cherub Logo Icon" src="Cherub_Logo.png" />
+          <Image className="nav-logo" alt="Cherub Logo Icon" src="/Cherub_Logo.png" />
         </a>
         <a href="/policies/terms">Terms of Use</a>
         <a href="/policies/privacy">Privacy Policy</a>
