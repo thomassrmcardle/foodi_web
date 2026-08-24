@@ -35,8 +35,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             <Image
               className="nav-logo"
               alt="Cherub Logo Icon"
-              src="/Cherub_Logo.png"
+              src="/cherub_logo.png"
               height={40}
+              width={200}
             />
           </a>
           <a href="/policies/terms">Terms of Use</a>
