@@ -73,6 +73,15 @@ li {
   margin-bottom: 8;
 }
 
+.gap-12 {
+  gap: 12;
+}
+
+.mv-12 {
+  margin-top: 12;
+  margin-bottom: 12;
+}
+
 .text-centre {
   text-align: center;
 }

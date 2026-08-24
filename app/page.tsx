@@ -5,7 +5,11 @@ import { Metadata } from 'next';
 export default function Home() {
 
   function Placeholder() {
-    return <Image className="section-img" alt="Placeholder Image" src={"https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1920px-No-Image-Placeholder.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"} />
+    return <Image
+      className="section-img"
+      alt="Placeholder Image"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1920px-No-Image-Placeholder.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+    />
   }
 
   function DownloadLinks() {
@@ -18,7 +22,7 @@ export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <div>
+        <div className="w-full">
           <h1 className="text-3xl text-centre">Cooking made simple.</h1>
           <p className="text-centre">Epic sad</p>
         </div>
@@ -26,21 +30,21 @@ export default function Home() {
         <DownloadLinks />
 
         <div>
-          <div className="flex-row">
+          <div className="mb-12 flex flex-row flex-wrap-row gap-12">
             <Placeholder />
             <div>
               <h2>Cook</h2>
               <p>With a recipe system built around cooking</p>
             </div>
           </div>
-          <div className="flex-row">
-            <Placeholder />
+          <div className="mb-12 flex flex-row flex-wrap-row gap-12">
             <div>
               <h2>Discover</h2>
-              <p>From a library of 100s of recipes from across the globe</p>
+              <p>From a library of 100s of recipes</p>
             </div>
+            <Placeholder />
           </div>
-          <div className="flex-row">
+          <div className="mb-12 flex flex-row flex-wrap-row gap-12">
             <Placeholder />
             <div>
               <h2>Share</h2>
@@ -48,7 +52,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        
+
         <DownloadLinks />
 
       </main>
