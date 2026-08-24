@@ -35,7 +35,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             <Image
               className="nav-logo"
               alt="Cherub Logo Icon"
-              src="/cherub_logo.png"
+              src="/Cherub_Logo.png"
               priority
             />
           </a>
