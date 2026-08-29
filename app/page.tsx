@@ -20,7 +20,7 @@ export default function Home() {
   }
 
   function Divider() {
-    return <div style={{height: '100%', width: 1, backgroundColor: 'var(--foreground)', opacity: 0.5}} />
+    return <div style={{height: 100, width: 2, backgroundColor: 'var(--foreground)', opacity: 0.5}} />
   }
 
   return (
@@ -31,20 +31,20 @@ export default function Home() {
           <p className="text-centre">Making food has never been easier</p>
         </div>
 
-        <div className="flex flex-row max-w-3xl">
+        <div className="flex flex-row max-w-3xl py-32">
           <div className="flex flex-col flex-1">
             <h2 className="text-centre">100+</h2>
-            <p className="text-centre">Shared Recipes</p>
+            <p className="text-centre">Recipes</p>
           </div>
           <Divider />
           <div className="flex flex-col flex-1">
-            <h2 className="text-centre">500</h2>
-            <p className="text-centre">Daily Users</p>
+            <h2 className="text-centre">500+</h2>
+            <p className="text-centre">Users</p>
           </div>
           <Divider />
           <div className="flex flex-col flex-1">
-            <h2 className="text-centre">2000</h2>
-            <p className="text-centre">Recipes Made Each Week</p>
+            <h2 className="text-centre">20+</h2>
+            <p className="text-centre">Reviews</p>
           </div>
         </div>
 
