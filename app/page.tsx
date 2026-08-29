@@ -27,6 +27,21 @@ export default function Home() {
           <p className="text-centre">Making food has never been easier</p>
         </div>
 
+        <div className="flex flex-row max-w-3xl">
+          <div className="flex flex-1">
+            <h2>100+</h2>
+            <p>Shared Recipes</p>
+          </div>
+          <div className="flex flex-1">
+            <h2>500</h2>
+            <p>Daily Users</p>
+          </div>
+          <div className="flex flex-1">
+            <h2>2000</h2>
+            <p>Recipes Made Each Week</p>
+          </div>
+        </div>
+
         <DownloadLinks />
 
         <div className="max-w-3xl">
