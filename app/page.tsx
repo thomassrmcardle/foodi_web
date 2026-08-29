@@ -19,6 +19,10 @@ export default function Home() {
     </div>
   }
 
+  function Divider() {
+    return <div style={{height: '100%', width: 1, backgroundColor: 'var(--foreground)', opacity: 0.5}} />
+  }
+
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex flex-1 w-full max-w-4xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-center">
@@ -28,17 +32,19 @@ export default function Home() {
         </div>
 
         <div className="flex flex-row max-w-3xl">
-          <div className="flex flex-1">
-            <h2>100+</h2>
-            <p>Shared Recipes</p>
+          <div className="flex flex-col flex-1">
+            <h2 className="text-centre">100+</h2>
+            <p className="text-centre">Shared Recipes</p>
           </div>
-          <div className="flex flex-1">
-            <h2>500</h2>
-            <p>Daily Users</p>
+          <Divider />
+          <div className="flex flex-col flex-1">
+            <h2 className="text-centre">500</h2>
+            <p className="text-centre">Daily Users</p>
           </div>
-          <div className="flex flex-1">
-            <h2>2000</h2>
-            <p>Recipes Made Each Week</p>
+          <Divider />
+          <div className="flex flex-col flex-1">
+            <h2 className="text-centre">2000</h2>
+            <p className="text-centre">Recipes Made Each Week</p>
           </div>
         </div>
 
