@@ -17,7 +17,7 @@ export default function Home() {
 
             <h2>Who can upload recipes?</h2>
             <p>Anyone with a Cherub account is able to upload their own recipes. We hope to provide this opportunity to as many as possible.</p>
-            <p>However, as per our <a>Terms of Use</a>, this feature may not be available to younger users, and some users may have this capability removed if they are continuously violate our policies.</p>
+            <p>However, as per our <a href="./policies/terms">Terms of Use</a>, this feature may not be available to younger users, and some users may have this capability removed if they are continuously violate our policies.</p>
             
             <h2>How is the platform kept safe?</h2>
             <p>The Cherub Team moderates every single recipe uploaded to the platform. This helps us ensure every public recipe lives up to our standards. Furthermore, it ensures a safe space where users can trust the quality of what they are making.</p>
