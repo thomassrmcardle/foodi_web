@@ -1,4 +1,10 @@
 
+import { Metadata } from 'next'; 
+
+export const metadata: Metadata = {
+  title: 'About Cherub',
+  description: "This document details the usage of user data on the Cherub platform. This includes what is collected, how it is used, and how you can have it modified or deleted.",
+};
 
 export default function Home() {
 
@@ -12,7 +18,7 @@ export default function Home() {
 
         <div className="max-w-3xl">
             <h1>Our Mission</h1>
-            <p>In the modern era, we recognise the value in human-made content, and we hope to provide a platform for food enthusiasts to discover and share recipes.</p>
+            <p>In the modern era, we recognise the value in human-made content, and we hope to provide a platform for food enthusiasts to discover and share recipes. With a growing, global user-base, we aim to provide a means for people to enjoy cooking and discover new dishes.</p>
             <p>We started from a simple foundation - make recipes easier. From timers to images, we re-define the standard of a recipe app while prioritising user experience.</p>
 
             <h2>Who can upload recipes?</h2>

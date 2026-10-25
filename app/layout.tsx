@@ -53,6 +53,9 @@ export default function RootLayout({ children }: {children: React.ReactNode}) {
               <div><a href="/policies/terms">Terms of Use</a></div>
               <div><a href="/policies/privacy">Privacy Policy</a></div>
             </div>
+            <div className="nav-column">
+              <div><a href="https://tiktok.com">Tiktok</a></div>
+            </div>
           </div>
         </footer>
       </body>
