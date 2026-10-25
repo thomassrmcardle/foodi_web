@@ -1,0 +1,178 @@
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { getRecipe } from "@/lib/recipes";
+
+type Props = {
+  params: Promise<{ id: string; slug: string }>;
+};
+
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+
+function recipeTitle(recipe: {
+  title?: string | null;
+  name?: string | null;
+}) {
+  return recipe.title || recipe.name || "Recipe";
+}
+
+export async function generateMetadata(
+  { params }: Props
+): Promise<Metadata> {
+  const { id, slug } = await params;
+  const recipe = await getRecipe(id);
+
+  if (!recipe) {
+    return { title: "Recipe not found | Cherub" };
+  }
+
+  const title = recipeTitle(recipe);
+  const description =
+    recipe.description || `Discover ${title} on Cherub.`;
+
+  const canonical =
+    `/recipes/${id}/${encodeURIComponent(slug)}`;
+
+  return {
+    title: `${title} | Cherub`,
+    description,
+    alternates: {
+      canonical,
+    },
+    openGraph: {
+      type: "article",
+      siteName: "Cherub",
+      title,
+      description,
+      url: canonical,
+      images: recipe.image_url
+        ? [{ url: recipe.image_url, alt: title }]
+        : [],
+    },
+    twitter: {
+      card: recipe.image_url ? "summary_large_image" : "summary",
+      title,
+      description,
+      images: recipe.image_url ? [recipe.image_url] : [],
+    },
+  };
+}
+
+
+function asItems(value: unknown): string[] {
+  if (Array.isArray(value)) {
+    return value.map((item) => {
+      if (typeof item === "string") return item;
+
+      if (item && typeof item === "object") {
+        const record = item as Record<string, unknown>;
+
+        for (const key of [
+          "name",
+          "ingredient",
+          "instruction",
+          "step",
+          "text",
+        ]) {
+          if (typeof record[key] === "string") {
+            return record[key] as string;
+          }
+        }
+      }
+
+      return "";
+    }).filter(Boolean);
+  }
+
+  if (typeof value === "string") {
+    return value.split("\n").map((s) => s.trim()).filter(Boolean);
+  }
+
+  return [];
+}
+
+export default async function RecipePage({ params }: Props) {
+  const { id } = await params;
+  const recipe = await getRecipe(id);
+
+  if (!recipe) notFound();
+
+  const title = recipeTitle(recipe);
+  const ingredients = asItems(recipe.ingredients);
+  const steps = asItems(recipe.instructions ?? recipe.steps);
+
+  // Replace this with Cherub's actual registered URL scheme
+  // or, preferably, its verified universal/app link.
+  const appUrl = `cherub://recipe/${id}`;
+
+  return (
+    <main className="mx-auto max-w-3xl px-5 py-10">
+      <header className="mb-8">
+        <a href="/" className="font-semibold text-purple-700">
+          Cherub
+        </a>
+
+        <h1 className="mt-5 text-4xl font-bold tracking-tight">
+          {title}
+        </h1>
+
+        {recipe.description && (
+          <p className="mt-3 text-lg text-gray-600">
+            {recipe.description}
+          </p>
+        )}
+      </header>
+
+      {recipe.image_url && (
+        <img
+          src={recipe.image_url}
+          alt={title}
+          className="mb-8 aspect-[16/9] w-full rounded-2xl object-cover"
+        />
+      )}
+
+      <a
+        href={appUrl}
+        className="mb-10 inline-flex rounded-full bg-purple-700 px-6 py-3 font-semibold text-white"
+      >
+        Open in Cherub
+      </a>
+
+      <section className="mb-10">
+        <h2 className="mb-4 text-2xl font-bold">Ingredients</h2>
+
+        {ingredients.length ? (
+          <ul className="list-inside list-disc space-y-2">
+            {ingredients.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        ) : (
+          <p className="text-gray-600">
+            Ingredients will be available here soon.
+          </p>
+        )}
+      </section>
+
+      <section>
+        <h2 className="mb-4 text-2xl font-bold">Method</h2>
+
+        {steps.length ? (
+          <ol className="list-inside list-decimal space-y-4">
+            {steps.map((step, index) => (
+              <li key={index}>{step}</li>
+            ))}
+          </ol>
+        ) : (
+          <p className="text-gray-600">
+            Preparation instructions will be available here soon.
+          </p>
+        )}
+      </section>
+
+      <footer className="mt-12 border-t pt-6 text-sm text-gray-500">
+        Discover and share recipes with Cherub.
+      </footer>
+    </main>
+  );
+}
