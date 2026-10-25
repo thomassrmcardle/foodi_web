@@ -21,6 +21,11 @@ export default defineConfig({
     compatibilityFlags: ["nodejs_compat"],
     assets: {
       notFoundHandling: "none",
+      runWorkerFirst: [
+        "/*",
+        "!/_next/static/*",
+        "!/*/_next/static/*",
+      ],
     },
     env: {
       ...responseStore.applicationWorker.env,
