@@ -47,7 +47,6 @@ export default function RootLayout({ children }: {children: React.ReactNode}) {
         </nav>
         {children}
         <footer>
-          <p>Foodi can be downloaded on the iOS App Store</p>
           <div className="flex-wrap-row">
             <div className="nav-column">
               <div><a href="/policies/terms">Terms of Use</a></div>
