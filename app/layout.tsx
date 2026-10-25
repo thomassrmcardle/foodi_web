@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import Image from "next/image";
+import React from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
   }
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({ children }: {children: React.ReactNode}) {
   return (
     <html
       lang="en"
@@ -40,6 +41,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               unoptimized // File path fix
             />
           </a>
+          <a href="/about">About</a>
           <a href="/policies/terms">Terms of Use</a>
           <a href="/policies/privacy">Privacy Policy</a>
         </nav>
