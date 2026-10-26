@@ -16,6 +16,15 @@ function recipeTitle(recipe: {
   return recipe.title || recipe.name || "Recipe";
 }
 
+function slugify(value: string) {
+  return value
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
 export async function generateMetadata(
   { params }: Props
 ): Promise<Metadata> {
@@ -30,14 +39,14 @@ export async function generateMetadata(
   const description =
     recipe.description || `Discover ${title} on Cherub.`;
 
-  const canonical =
-    `/recipes/${id}/${encodeURIComponent(slug)}`;
+  const canonical = `/recipes/${encodeURIComponent(id)}/${slugify(title)}`;
+  const absoluteUrl = new URL(canonical, siteUrl).toString();
 
   return {
     title: `${title} | Cherub`,
     description,
     alternates: {
-      canonical,
+      canonical: absoluteUrl,
     },
     openGraph: {
       type: "article",
@@ -59,38 +68,6 @@ export async function generateMetadata(
 }
 
 
-function asItems(value: unknown): string[] {
-  if (Array.isArray(value)) {
-    return value.map((item) => {
-      if (typeof item === "string") return item;
-
-      if (item && typeof item === "object") {
-        const record = item as Record<string, unknown>;
-
-        for (const key of [
-          "name",
-          "ingredient",
-          "instruction",
-          "step",
-          "text",
-        ]) {
-          if (typeof record[key] === "string") {
-            return record[key] as string;
-          }
-        }
-      }
-
-      return "";
-    }).filter(Boolean);
-  }
-
-  if (typeof value === "string") {
-    return value.split("\n").map((s) => s.trim()).filter(Boolean);
-  }
-
-  return [];
-}
-
 export default async function RecipePage({ params }: Props) {
   const { id } = await params;
   const recipe = await getRecipe(id);
@@ -98,8 +75,6 @@ export default async function RecipePage({ params }: Props) {
   if (!recipe) notFound();
 
   const title = recipeTitle(recipe);
-  const ingredients = asItems(recipe.ingredients);
-  const steps = asItems(recipe.instructions ?? recipe.steps);
 
   // Replace this with Cherub's actual registered URL scheme
   // or, preferably, its verified universal/app link.
@@ -141,33 +116,10 @@ export default async function RecipePage({ params }: Props) {
       <section className="mb-10">
         <h2 className="mb-4 text-2xl font-bold">Ingredients</h2>
 
-        {ingredients.length ? (
-          <ul className="list-inside list-disc space-y-2">
-            {ingredients.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
-        ) : (
+
           <p className="text-gray-600">
             Ingredients will be available here soon.
           </p>
-        )}
-      </section>
-
-      <section>
-        <h2 className="mb-4 text-2xl font-bold">Method</h2>
-
-        {steps.length ? (
-          <ol className="list-inside list-decimal space-y-4">
-            {steps.map((step, index) => (
-              <li key={index}>{step}</li>
-            ))}
-          </ol>
-        ) : (
-          <p className="text-gray-600">
-            Preparation instructions will be available here soon.
-          </p>
-        )}
       </section>
 
       <footer className="mt-12 border-t pt-6 text-sm text-gray-500">
