@@ -3,7 +3,6 @@ export type Recipe = {
   title?: string | null;
   name?: string | null;
   description?: string | null;
-  image_path?: string | null;   // e.g. "recipes/123/cover.jpg"
   image_url?: string | null;    // optional if you already store full URL
   [key: string]: unknown;
 };
