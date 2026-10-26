@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getRecipe, getRecipeWithImage } from "@/lib/recipes";
 
+export const dynamic = "force-dynamic";
+
 type Props = {
   params: Promise<{ id: string; slug: string }>;
 };
