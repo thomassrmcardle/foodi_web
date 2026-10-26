@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getRecipe } from "@/lib/recipes";
+import { getRecipe, getRecipeWithImage } from "@/lib/recipes";
 
 type Props = {
   params: Promise<{ id: string; slug: string }>;
@@ -29,7 +29,7 @@ export async function generateMetadata(
   { params }: Props
 ): Promise<Metadata> {
   const { id, slug } = await params;
-  const recipe = await getRecipe(id);
+  const recipe = await getRecipeWithImage(id);
 
   console.log('Got recipe',id)
 

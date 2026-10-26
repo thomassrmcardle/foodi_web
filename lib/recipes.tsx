@@ -10,7 +10,7 @@ export type Recipe = {
 
 function getSupabaseStoragePublicUrl(path: string) {
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const bucket = process.env.NEXT_PUBLIC_SUPABASE_BUCKET ?? "recipe-images";
+  const bucket = "recipe_images";
 
   if (!supabaseUrl || !path) return null;
 
