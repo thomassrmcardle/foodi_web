@@ -71,7 +71,7 @@ export async function getRecipeWithImage(id: string): Promise<(Recipe & { imageU
     imagePath && imagePath.startsWith("http")
       ? imagePath
       : imagePath
-        ? getSupabaseStoragePublicUrl(imagePath)
+        ? getSupabaseStoragePublicUrl(`${recipe.id}/cover.jpg`)
         : null;
 
   return {
