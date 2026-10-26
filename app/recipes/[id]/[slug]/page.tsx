@@ -43,6 +43,9 @@ export async function generateMetadata(
 
   const canonical = `/recipes/${encodeURIComponent(id)}/${slugify(title)}`;
   const absoluteUrl = new URL(canonical, siteUrl).toString();
+  const imageUrl = recipe.image_url
+    ? new URL(recipe.image_url, siteUrl).toString()
+    : undefined;
 
   return {
     title: `${title} | Cherub`,
@@ -55,12 +58,14 @@ export async function generateMetadata(
       siteName: "Cherub",
       title,
       description,
-      url: canonical,
+      url: absoluteUrl,
+      images: imageUrl? [{url: imageUrl}] : undefined,
     },
     twitter: {
       card: recipe.image_url ? "summary_large_image" : "summary",
       title,
       description,
+      images: imageUrl ? [imageUrl] : undefined,
     },
   };
 }
@@ -80,10 +85,16 @@ export default async function RecipePage({ params }: Props) {
 
   return (
     <main className="mx-auto max-w-3xl px-5 py-10">
+
+      {recipe.image_url && (
+        <img 
+          src={recipe.image_url}
+          alt={title}
+          className="mb-8 h-72 w-full rounded-2xl object-cover"
+        />
+      )}
+
       <header className="mb-8">
-        <a href="/" className="font-semibold text-purple-700">
-          Cherub
-        </a>
 
         <h1 className="mt-5 text-4xl font-bold tracking-tight">
           {title}

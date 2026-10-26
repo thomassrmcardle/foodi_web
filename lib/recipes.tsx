@@ -3,8 +3,20 @@ export type Recipe = {
   title?: string | null;
   name?: string | null;
   description?: string | null;
+  image_path?: string | null;   // e.g. "recipes/123/cover.jpg"
+  image_url?: string | null;    // optional if you already store full URL
   [key: string]: unknown;
 };
+
+function getSupabaseStoragePublicUrl(path: string) {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const bucket = process.env.NEXT_PUBLIC_SUPABASE_BUCKET ?? "recipe-images";
+
+  if (!supabaseUrl || !path) return null;
+
+  const cleanPath = path.replace(/^\/+/, "");
+  return `${supabaseUrl.replace(/\/$/, "")}/storage/v1/object/public/${bucket}/${cleanPath}`;
+}
 
 export async function getRecipe(id: string): Promise<Recipe | null> {
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -40,4 +52,30 @@ export async function getRecipe(id: string): Promise<Recipe | null> {
 
   const recipes: Recipe[] = await response.json();
   return recipes[0] ?? null;
+}
+
+
+export async function getRecipeWithImage(id: string): Promise<(Recipe & { imageUrl?: string | null }) | null> {
+  const recipe = await getRecipe(id);
+
+  if (!recipe) return null;
+
+  const imagePath =
+    typeof recipe.image_path === "string"
+      ? recipe.image_path
+      : typeof recipe.image_url === "string"
+        ? recipe.image_url
+        : null;
+
+  const imageUrl =
+    imagePath && imagePath.startsWith("http")
+      ? imagePath
+      : imagePath
+        ? getSupabaseStoragePublicUrl(imagePath)
+        : null;
+
+  return {
+    ...recipe,
+    imageUrl,
+  };
 }
