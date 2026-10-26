@@ -37,8 +37,10 @@ export default function RootLayout({ children }: {children: React.ReactNode}) {
               className="nav-logo"
               alt="Cherub Logo Icon"
               src="/Cherub_Logo.png"
+              width={120}
+              height={40}
               priority
-              unoptimized // File path fix
+              unoptimized
             />
           </a>
           <a href="/about">About</a>
