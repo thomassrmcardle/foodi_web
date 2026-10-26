@@ -3,11 +3,11 @@ import { createWorkersResponseStoreServiceBindingConfig } from "@vinext/cloudfla
 
 const responseStore = await createWorkersResponseStoreServiceBindingConfig({
   worker: {
-    name: "demo-next-response-store",
+    name: "cherub-response-store",
     compatibilityDate: "2026-10-25",
     compatibilityFlags: ["nodejs_compat"],
   },
-  bucket: "demo-next-response-store-cache-bodies",
+  bucket: "cherub-response-store-cache-bodies",
 });
 
 export const responseStoreServiceBinding = responseStore.serviceBindingWorker;
