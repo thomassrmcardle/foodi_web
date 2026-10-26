@@ -56,15 +56,11 @@ export async function generateMetadata(
       title,
       description,
       url: canonical,
-      images: recipe.image_url
-        ? [{ url: recipe.image_url, alt: title }]
-        : [],
     },
     twitter: {
       card: recipe.image_url ? "summary_large_image" : "summary",
       title,
       description,
-      images: recipe.image_url ? [recipe.image_url] : [],
     },
   };
 }
@@ -99,14 +95,6 @@ export default async function RecipePage({ params }: Props) {
           </p>
         )}
       </header>
-
-      {recipe.image_url && (
-        <img
-          src={recipe.image_url}
-          alt={title}
-          className="mb-8 aspect-[16/9] w-full rounded-2xl object-cover"
-        />
-      )}
 
       <a
         href={appUrl}
