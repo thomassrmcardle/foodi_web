@@ -4,12 +4,5 @@
     "vars": {
         "NEXT_PUBLIC_SUPABASE_ANON_KEY": "sb_publishable_UE8l_rSu_sQ03rsuPBGXpw_ZuOpVeva",
         "NEXT_PUBLIC_SUPABASE_URL": "https://dbzecdotlcouxvqcrrku.supabase.co"
-    },
-    "observability": {
-        "logs": {
-            "enabled": true,
-            "invocation_logs": true,
-            "persist": true
-        }
     }
 }
