@@ -9,6 +9,8 @@ export default function Home() {
       className="section-img"
       alt="Placeholder Image"
       src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1920px-No-Image-Placeholder.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+      width={420}
+      height={240}
     />
   }
 

@@ -57,25 +57,10 @@ export async function getRecipe(id: string): Promise<Recipe | null> {
 
 export async function getRecipeWithImage(id: string): Promise<(Recipe & { imageUrl?: string | null }) | null> {
   const recipe = await getRecipe(id);
-
   if (!recipe) return null;
-
-  const imagePath =
-    typeof recipe.image_path === "string"
-      ? recipe.image_path
-      : typeof recipe.image_url === "string"
-        ? recipe.image_url
-        : null;
-
-  const imageUrl =
-    imagePath && imagePath.startsWith("http")
-      ? imagePath
-      : imagePath
-        ? getSupabaseStoragePublicUrl(`${recipe.id}/cover.jpg`)
-        : null;
-
+  const image_url = getSupabaseStoragePublicUrl(`${recipe.id}/cover.jpg`)
   return {
     ...recipe,
-    imageUrl,
+    image_url,
   };
 }
