@@ -70,7 +70,12 @@ export default async function RecipePage({ params }: Props) {
   const { id } = await params;
   const recipe = await getRecipe(id);
 
-  if (!recipe) notFound();
+  if (!recipe) {
+    return <main className="mx-auto max-w-3xl px-5 py-10">
+      <h1>Unknown recipe</h1>
+      <p>Please check you entered the correct url, or try again later if the issue persists.</p>
+    </main>
+  };
 
   const title = recipeTitle(recipe);
 
