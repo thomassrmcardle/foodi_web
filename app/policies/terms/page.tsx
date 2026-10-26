@@ -1,7 +1,7 @@
 import { Metadata } from 'next'; 
 
 export const metadata: Metadata = {
-    title: 'Privacy Policy',
+    title: 'Terms of Use | Cherub',
     description: "This document details the usage of user data on the Cherub platform. This includes what is collected, how it is used, and how you can have it modified or deleted.",
 };
 
