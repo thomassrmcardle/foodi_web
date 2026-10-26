@@ -107,6 +107,7 @@ li {
 
 .bg-green {
   background-color: var(--accent);
+  color: #ededed;
 }
 
 .nav-column {
