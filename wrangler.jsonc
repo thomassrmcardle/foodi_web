@@ -1,6 +1,10 @@
 { // Environmental variables (persist between builds)
     "name": "cherub",
     "compatibility_date": "2026-10-23",
+    "vars": {
+        "NEXT_PUBLIC_SUPABASE_ANON_KEY": "sb_publishable_UE8l_rSu_sQ03rsuPBGXpw_ZuOpVeva",
+        "NEXT_PUBLIC_SUPABASE_URL": "https://dbzecdotlcouxvqcrrku.supabase.co"
+    },
     "observability": {
         "logs": {
             "enabled": true,
