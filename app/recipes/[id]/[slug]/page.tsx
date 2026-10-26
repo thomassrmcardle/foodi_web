@@ -39,9 +39,11 @@ export async function generateMetadata(
     return { title: "Recipe not found | Cherub" };
   }
 
+  const caption = 'Discover and share even more recipes on Cherub.'
+
   const title = recipeTitle(recipe);
   const description =
-    recipe.description || `Discover ${title} on Cherub.`;
+    recipe.description + '\n' + caption || `Discover ${title} on Cherub.`;
 
   const canonical = `/recipes/${encodeURIComponent(id)}/${slugify(title)}`;
   const absoluteUrl = new URL(canonical, siteUrl).toString();
@@ -103,7 +105,7 @@ export default async function RecipePage({ params }: Props) {
         </h1>
 
         {recipe.description && (
-          <p className="mt-3 text-lg text-gray-600">
+          <p className="mt-3 text-lg">
             {recipe.description}
           </p>
         )}
@@ -111,7 +113,7 @@ export default async function RecipePage({ params }: Props) {
 
       <a
         href={appUrl}
-        className="mb-10 inline-flex rounded-full bg-purple-700 px-6 py-3 font-semibold text-white"
+        className="mb-10 inline-flex rounded-full bg-green no-decor px-6 py-3 font-semibold text-white"
       >
         Open in Cherub
       </a>

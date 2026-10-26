@@ -101,6 +101,14 @@ li {
   justify-content: center;
 }
 
+.no-decor {
+  text-decoration: none;
+}
+
+.bg-green {
+  background-color: var(--accent);
+}
+
 .nav-column {
   flex-direction: column;
   flex-wrap: nowrap;
