@@ -15,7 +15,7 @@ export const responseStoreServiceBinding = responseStore.serviceBindingWorker;
 export default defineConfig({
   worker: defineWorker({
     ...responseStore.applicationWorker,
-    name: "demo-next",
+    name: "cherub",
     entrypoint: "vinext/server/fetch-handler",
     compatibilityDate: "2026-10-25",
     compatibilityFlags: ["nodejs_compat"],
