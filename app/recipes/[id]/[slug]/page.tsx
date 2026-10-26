@@ -75,7 +75,7 @@ export async function generateMetadata(
 
 export default async function RecipePage({ params }: Props) {
   const { id } = await params;
-  const recipe = await getRecipe(id);
+  const recipe = await getRecipeWithImage(id);
 
   if (!recipe) notFound()
 
