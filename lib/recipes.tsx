@@ -1,3 +1,5 @@
+import { env } from "cloudflare:workers";
+
 export type Recipe = {
   id: string | number;
   title?: string | null;
@@ -18,8 +20,8 @@ function getSupabaseStoragePublicUrl(path: string) {
 }
 
 export async function getRecipe(id: string): Promise<Recipe | null> {
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  const supabaseUrl = env.NEXT_PUBLIC_SUPABASE_URL;
+  const supabaseKey = env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
   if (!supabaseUrl || !supabaseKey) {
     throw new Error("Missing Supabase environment variables");
