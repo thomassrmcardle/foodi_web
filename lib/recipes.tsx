@@ -3,10 +3,6 @@ export type Recipe = {
   title?: string | null;
   name?: string | null;
   description?: string | null;
-  image_url?: string | null;
-  ingredients?: unknown;
-  instructions?: unknown;
-  steps?: unknown;
   [key: string]: unknown;
 };
 
@@ -20,6 +16,7 @@ export async function getRecipe(id: string): Promise<Recipe | null> {
 
   // Accept numeric IDs only for this initial implementation.
   if (!/^\d+$/.test(id)) {
+    console.log('recipe look up failed')
     return null;
   }
 

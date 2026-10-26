@@ -31,6 +31,8 @@ export async function generateMetadata(
   const { id, slug } = await params;
   const recipe = await getRecipe(id);
 
+  console.log('Got recipe',id)
+
   if (!recipe) {
     return { title: "Recipe not found | Cherub" };
   }
