@@ -1,4 +1,3 @@
-
 import { bindings, defineConfig, defineWorker } from "cf/config";
 
 export default defineConfig({
@@ -18,6 +17,13 @@ export default defineConfig({
     env: {
       ASSETS: bindings.assets(),
       IMAGES: bindings.images(),
+
+      NEXT_PUBLIC_SUPABASE_URL: bindings.text(
+        "https://dbzecdotlcouxvqcrrku.supabase.co"
+      ),
+      NEXT_PUBLIC_SUPABASE_ANON_KEY: bindings.text(
+        "sb_publishable_UE8l_rSu_sQ03rsuPBGXpw_ZuOpVeva"
+      ),
     },
   }),
 });
