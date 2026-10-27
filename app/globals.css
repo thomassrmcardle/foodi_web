@@ -84,7 +84,7 @@ button:hover {
 
 input {
   background-color: var(--middleground);
-  padding: 8px;
+  padding: 12px;
   margin-top: 12px;
   margin-bottom: 12px;
 }

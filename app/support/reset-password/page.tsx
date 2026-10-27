@@ -63,7 +63,7 @@ export default function ResetPassword() {
 
         {errorMessage && <p className="text-sm mb-12 text-gray-500" role="alert">{errorMessage}</p>}
 
-        <button className="bg-green rounded-2xl px-6 py-3 font-semibold" type="submit" disabled={loading || !password}>
+        <button className="bg-green rounded-2xl px-6 py-3 w-full font-semibold" type="submit" disabled={loading || !password}>
           {loading ? "Updating..." : "Change password"}
         </button>
 
