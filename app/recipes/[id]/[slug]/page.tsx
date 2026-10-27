@@ -109,14 +109,26 @@ export default async function RecipePage({ params }: Props) {
             {recipe.description}
           </p>
         )}
+
+        {recipe.author && (
+          <div>
+            <div>
+              <h2>{recipe.author}</h2>
+              <p>Cherub User</p>
+            </div>
+          </div>
+        )}
+
       </header>
 
-      <a
-        href={appUrl}
-        className="mb-10 inline-flex rounded-full bg-green no-decor px-6 py-3 font-semibold text-white"
-      >
-        Open in Cherub
-      </a>
+      <div className="mb-10 inline-flex">
+        <a href={appUrl} className="rounded-full bg-green no-decor px-6 py-3 font-semibold text-white">
+          Open in Cherub
+        </a>
+        <a href='/' className="rounded-full bg-grey no-decor px-6 py-3 font-semibold">
+          Download Cherub
+        </a>
+      </div>
 
       <section className="mb-10">
         <h2 className="mb-4 text-2xl font-bold">Ingredients</h2>

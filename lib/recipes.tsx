@@ -5,6 +5,7 @@ export type Recipe = {
   title?: string | null;
   name?: string | null;
   description?: string | null;
+  author?: string | null;
   image_url?: string | null;    // optional if you already store full URL
   [key: string]: unknown;
 };

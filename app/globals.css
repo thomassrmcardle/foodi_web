@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #dcdcdc;
+  --middleground: #efefef;
   --foreground: #171717;
   --accent: #1bbd41;
 }
@@ -16,6 +17,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
+    --middleground: #2f2f2f;
     --foreground: #ededed;
   }
 }
@@ -69,7 +71,7 @@ a {
 }
 
 a:hover {
-  opacity: 0.5;
+  opacity: 0.75;
 }
 
 ol {
@@ -107,6 +109,12 @@ li {
   justify-content: center;
 }
 
+.flex-space-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .no-decor {
   text-decoration: none;
 }
@@ -114,6 +122,11 @@ li {
 .bg-green {
   background-color: var(--accent);
   color: #ededed;
+}
+
+.bg-grey {
+  background-color: var(--middleground);
+  color: var(--foreground);
 }
 
 .nav-column {
