@@ -111,13 +111,13 @@ export default async function RecipePage({ params }: Props) {
         )}
 
         {recipe.author && (
-          <div className="flex gap-12">
+          <div className="flex gap-12 mt-20">
             <img
               src={recipe.creator_pfp ?? 'https://placehold.co/100x100'}
               className="pfp rounded-full"
             />
             <div className="align-center">
-              <h2>{recipe.author_profile ? recipe.author_profile.display_name : 'Unknown User'}</h2>
+              <h2 className="m0">{recipe.author_profile ? recipe.author_profile.display_name : 'Unknown User'}</h2>
               <p>Cherub User</p>
             </div>
           </div>
