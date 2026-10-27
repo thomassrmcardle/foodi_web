@@ -65,6 +65,11 @@ a {
   font-weight: bold;
   text-decoration: underline;
   color: var(--accent);
+  transition: all 0.125;
+}
+
+a:hover {
+  opacity: 0.5;
 }
 
 ol {
@@ -114,6 +119,7 @@ li {
 .nav-column {
   flex-direction: column;
   flex-wrap: nowrap;
+  margin-block: 16px;
 }
 
 .nav-column div {

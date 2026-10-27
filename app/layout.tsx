@@ -25,6 +25,10 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+
+  const d = new Date()
+  let year = d.getFullYear();
+
   return (
     <html
       lang="en"
@@ -48,7 +52,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <footer className="mt-12 border-t pt-6">
 
-          <div className="text-sm text-gray-500">Discover and share recipes with Cherub.</div>
+          <div className="flex-space-row">
+            <div className="text-sm text-gray-500">Discover and share recipes with Cherub.</div>
+            <div className="text-sm text-gray-500">All content © Cherub {year}</div>
+          </div>
 
           <div className="flex-wrap-row">
             <div className="nav-column">
