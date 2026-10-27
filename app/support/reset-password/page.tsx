@@ -4,6 +4,13 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { getSupabaseClient } from "@/lib/supabase";
 
+import { Metadata } from 'next'; 
+
+export const metadata: Metadata = {
+  title: 'Reset Password | Cherub',
+  description: "Reset the password of your Cherub account.",
+};
+
 export default function ResetPassword() {
   const router = useRouter();
   const [password, setPassword] = useState("");
@@ -34,9 +41,9 @@ export default function ResetPassword() {
   return (
     <main className="mx-auto max-w-2xl px-5 py-10">
       <h1>Reset Password</h1>
-      <p>Enter a new password for your account.</p>
+      <p>Enter a new password for your Cherub Account.</p>
 
-      <form
+      <form className="flex-col inline-flex"
         onSubmit={(event) => {
           event.preventDefault();
           setNewPassword(password);
@@ -49,15 +56,16 @@ export default function ResetPassword() {
           placeholder="New password"
           autoComplete="new-password"
           required
-          minLength={8}
+          minLength={3}
           disabled={loading}
         />
 
-        {errorMessage && <p role="alert">{errorMessage}</p>}
+        {errorMessage && <p className="text-sm text-gray-500" role="alert">{errorMessage}</p>}
 
-        <button type="submit" disabled={loading || !password}>
+        <button className="bg-green rounded-full px-6 py-3 font-semibold" type="submit" disabled={loading || !password}>
           {loading ? "Updating..." : "Change password"}
         </button>
+
       </form>
     </main>
   );

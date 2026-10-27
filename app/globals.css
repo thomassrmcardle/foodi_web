@@ -74,6 +74,21 @@ a:hover {
   opacity: 0.75;
 }
 
+button {
+  transition: all 0.125;
+}
+
+button:hover {
+  opacity: 0.75;
+}
+
+input {
+  background-color: var(--middleground);
+  padding: 8px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
 ol {
   list-style-type: decimal;
   padding-left: 36;
@@ -96,6 +111,10 @@ li {
 
 .mt-20 {
   margin-top: 20px;
+}
+
+.mt-12 {
+  margin-top: 12px;
 }
 
 .m0 {
