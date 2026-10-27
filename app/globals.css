@@ -94,6 +94,14 @@ li {
   gap: 12;
 }
 
+.mt-28 {
+  margin-top: 28px;
+}
+
+.m0 {
+  margin: 0;
+}
+
 .mv-12 {
   margin-top: 12;
   margin-bottom: 12;
@@ -105,6 +113,10 @@ li {
 
 .text-centre {
   text-align: center;
+}
+
+.align-center {
+  align-items: center;
 }
 
 .flex-wrap-row {
