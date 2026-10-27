@@ -43,13 +43,14 @@ export default function ResetPassword() {
       <h1>Reset Password</h1>
       <p>Enter a new password for your Cherub Account.</p>
 
-      <form className="flex-col inline-flex"
+      <form className="w-full"
         onSubmit={(event) => {
           event.preventDefault();
           setNewPassword(password);
         }}
       >
         <input
+            className="w-full rounded-2xl"
           type="password"
           value={password}
           onChange={(event) => setPassword(event.target.value)}
@@ -60,9 +61,9 @@ export default function ResetPassword() {
           disabled={loading}
         />
 
-        {errorMessage && <p className="text-sm text-gray-500" role="alert">{errorMessage}</p>}
+        {errorMessage && <p className="text-sm mb-12 text-gray-500" role="alert">{errorMessage}</p>}
 
-        <button className="bg-green rounded-full px-6 py-3 font-semibold" type="submit" disabled={loading || !password}>
+        <button className="bg-green rounded-2xl px-6 py-3 font-semibold" type="submit" disabled={loading || !password}>
           {loading ? "Updating..." : "Change password"}
         </button>
 

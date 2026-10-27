@@ -132,10 +132,10 @@ export default async function RecipePage({ params }: Props) {
       </header>
 
       <div className="gap-12 mb-10 inline-flex">
-        <a href={appUrl} className="rounded-full bg-green no-decor px-6 py-3 font-semibold text-white">
+        <a href={appUrl} className="rounded-2xl bg-green no-decor px-6 py-3 font-semibold text-white">
           Open in Cherub
         </a>
-        <a href='/' className="rounded-full bg-grey no-decor px-6 py-3 font-semibold">
+        <a href='/' className="rounded-2xl bg-grey no-decor px-6 py-3 font-semibold">
           Download Cherub
         </a>
       </div>
