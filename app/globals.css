@@ -90,6 +90,10 @@ li {
   gap: 28;
 }
 
+.gap-12 {
+  gap: 12;
+}
+
 .mv-12 {
   margin-top: 12;
   margin-bottom: 12;
@@ -132,7 +136,7 @@ li {
 .nav-column {
   flex-direction: column;
   flex-wrap: nowrap;
-  margin-block: 16px;
+  margin-inline: 16px;
 }
 
 .nav-column div {
@@ -142,6 +146,12 @@ li {
 
 .nav-logo {
   height: 56;
+}
+
+.pfp {
+  width: 60;
+  height: 60;
+  aspect-ratio: 1;
 }
 
 .section-img {

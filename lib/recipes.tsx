@@ -6,16 +6,14 @@ export type Recipe = {
   name?: string | null;
   description?: string | null;
   author?: string | null;
+  creator_pfp?: string | null;
   image_url?: string | null;    // optional if you already store full URL
   [key: string]: unknown;
 };
 
-function getSupabaseStoragePublicUrl(path: string) {
+function getSupabaseStoragePublicUrl(bucket : string, path: string) {
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const bucket = "recipe_images";
-
   if (!supabaseUrl || !path) return null;
-
   const cleanPath = path.replace(/^\/+/, "");
   return `${supabaseUrl.replace(/\/$/, "")}/storage/v1/object/public/${bucket}/${cleanPath}`;
 }
@@ -60,9 +58,11 @@ export async function getRecipe(id: string): Promise<Recipe | null> {
 export async function getRecipeWithImage(id: string): Promise<(Recipe & { imageUrl?: string | null }) | null> {
   const recipe = await getRecipe(id);
   if (!recipe) return null;
-  const image_url = getSupabaseStoragePublicUrl(`${recipe.id}/cover.jpg`)
+  const image_url = getSupabaseStoragePublicUrl('recipe_images', `${recipe.id}/cover.jpg`)
+  const creator_pfp = getSupabaseStoragePublicUrl('user_profiles', `${recipe.author}/profile_picture.jpg`)
   return {
     ...recipe,
+    creator_pfp,
     image_url,
   };
 }

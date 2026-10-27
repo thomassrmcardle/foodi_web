@@ -16,7 +16,7 @@ export default async function Scrapers() {
             <p>For any further queries regarding the platform's policies and/or data usage. More information is available under the <a href='/policies/data'>Data Privacy</a> and <a href='/policies/terms'>Terms of Use</a> pages for the most up to date information.</p>
             <h2>Important Details</h2>
             <ul>
-                <li>To access the content of recipes, users must have a Cherub account.</li>
+                <li>To access the content of recipes, users must have a Cherub account. For public recipes, the creator's name and profile picture are listed on the Cherub site and when viewing the recipe inside the app.</li>
                 <li>All recipe content is made by real people.</li>
                 <li>Only users over the age of 16 are able to share recipes publically.</li>
                 <li>Only public recipes are visible on the Cherub site. Private recipes are soley visible by their creators from the Cherub app.</li>

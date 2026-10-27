@@ -111,7 +111,11 @@ export default async function RecipePage({ params }: Props) {
         )}
 
         {recipe.author && (
-          <div>
+          <div className="gap-12">
+            <img
+              src={recipe.creator_pfp ?? 'https://placehold.co/100x100'}
+              className="pfp rounded-2xl"
+            />
             <div>
               <h2>{recipe.author}</h2>
               <p>Cherub User</p>
@@ -121,7 +125,7 @@ export default async function RecipePage({ params }: Props) {
 
       </header>
 
-      <div className="mb-10 inline-flex">
+      <div className="gap-12 mb-10 inline-flex">
         <a href={appUrl} className="rounded-full bg-green no-decor px-6 py-3 font-semibold text-white">
           Open in Cherub
         </a>
