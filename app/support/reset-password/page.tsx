@@ -2,11 +2,14 @@
 "use client";
 
 import { useState } from "react";
-import Router from "next/router";
+import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 
 
 export default function ResetPassword() {
+
+    const router = useRouter()
+
     const [password, setPassword] = useState("");
     const [errorMessage, setErrorMessage] = useState("");
     const [loading, setLoading] = useState(false);
@@ -25,7 +28,7 @@ export default function ResetPassword() {
                 return;
             }
 
-            await Router.push("/changed-password");
+            await router.push("/changed-password");
         } catch {
             setErrorMessage("Something went wrong. Please try again.");
         } finally {
