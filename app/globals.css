@@ -3,7 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --accent: #6dffa0;
+  --accent: #1bbd41;
 }
 
 @theme inline {
@@ -42,6 +42,7 @@ body {
 footer {
   padding: 24;
   justify-content: center;
+  margin-bottom: 40;
 }
 
 h1 {
@@ -113,6 +114,11 @@ li {
 .nav-column {
   flex-direction: column;
   flex-wrap: nowrap;
+}
+
+.nav-column div {
+  flex-grow: 1;
+  flex-direction: row;
 }
 
 .nav-logo {

@@ -126,10 +126,6 @@ export default async function RecipePage({ params }: Props) {
             Ingredients will be available here soon.
           </p>
       </section>
-
-      <footer className="mt-12 border-t pt-6 text-sm text-gray-500">
-        Discover and share recipes with Cherub.
-      </footer>
     </main>
   );
 }

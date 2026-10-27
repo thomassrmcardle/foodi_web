@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: 'Terms of Use | Cherub',
-    description: "This document details the usage of user data on the Cherub platform. This includes what is collected, how it is used, and how you can have it modified or deleted.",
+    description: "This document details the policies of the Cherub Platform, including the expectations of users and what action may be taken if these standards are not met.",
 };
 
 export default function Home() {

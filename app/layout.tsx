@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   }
 };
 
-export default function RootLayout({ children }: {children: React.ReactNode}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang="en"
@@ -46,14 +46,23 @@ export default function RootLayout({ children }: {children: React.ReactNode}) {
           <a href="/policies/privacy">Privacy Policy</a>
         </nav>
         {children}
-        <footer>
+        <footer className="mt-12 border-t pt-6">
+
+          <div className="text-sm text-gray-500">Discover and share recipes with Cherub.</div>
+
           <div className="flex-wrap-row">
             <div className="nav-column">
+              <h2>Our Policies</h2>
               <div><a href="/policies/terms">Terms of Use</a></div>
               <div><a href="/policies/privacy">Privacy Policy</a></div>
             </div>
             <div className="nav-column">
+              <h2>Social Media</h2>
               <div><a href="https://tiktok.com">Tiktok</a></div>
+            </div>
+            <div className="nav-column">
+              <h2>Extra Info</h2>
+              <div><a href="/policies/scrapers">For LLMS & Scrapers</a></div>
             </div>
           </div>
         </footer>
