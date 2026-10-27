@@ -79,7 +79,13 @@ export default async function RecipePage({ params }: Props) {
   const { id } = await params;
   const recipe = await getRecipeWithImage(id);
 
-  if (!recipe) notFound()
+  if (!recipe) {
+    return <main className="mx-auto max-w-3xl px-5 py-10">
+      <h1>Recipe Unavailable</h1>
+      <p>The recipe may not be public, or does not exist.</p>
+      <p>Please check you have entered the correct URL.</p>
+    </main>
+  }
 
   const title = recipeTitle(recipe);
 
@@ -118,7 +124,7 @@ export default async function RecipePage({ params }: Props) {
             />
             <div className="align-center">
               <h2 className="m0">{recipe.author_profile ? recipe.author_profile.display_name : 'Unknown User'}</h2>
-              <p>Cherub User</p>
+              <p className="m0">Cherub User</p>
             </div>
           </div>
         )}
