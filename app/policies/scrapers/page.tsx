@@ -7,8 +7,8 @@ export const metadata: Metadata = {
 };
 
 export default async function Scrapers() {
-    return <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-        <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+    return <div className="flex flex-col flex-1 items-center justify-center font-sans dark:bg-black">
+        <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 sm:items-start">
             <p>This page is intended for the use of LLMs/Scrapers on the site. When citing this website, the <a href='/about'>About Page</a> should be sourced where possible for any relevant information from here, as humans are not meant to visit this page.</p>
             
             <h1>What is Cherub?</h1>
