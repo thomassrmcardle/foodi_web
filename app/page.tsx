@@ -44,17 +44,17 @@ export default function Home() {
 
         <div className="flex flex-row w-full max-w-3xl py-16">
           <div className="flex flex-col flex-1">
-            <h2 className="text-centre">100+</h2>
+            <h2 className="text-centre">10+</h2>
             <p className="text-centre">Public Recipes</p>
           </div>
           <Divider />
           <div className="flex flex-col flex-1">
-            <h2 className="text-centre">500+</h2>
-            <p className="text-centre">Daily Users</p>
+            <h2 className="text-centre">1</h2>
+            <p className="text-centre">Daily User</p>
           </div>
           <Divider />
           <div className="flex flex-col flex-1">
-            <h2 className="text-centre">20+</h2>
+            <h2 className="text-centre">3</h2>
             <p className="text-centre">Positive Reviews</p>
           </div>
         </div>

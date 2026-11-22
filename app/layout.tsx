@@ -49,7 +49,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <a href="/policies/terms">Terms of Use</a>
           <a href="/policies/privacy">Privacy Policy</a>
         </nav>
-        {children}
+        <div className="bg-main flex-1 flex flex-col w-full">
+          {children}
+        </div>
         <footer className="mt-12 border-t pt-6">
 
           <div className="flex-space-row">
@@ -69,6 +71,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
             <div className="nav-column">
               <h2>Extra Info</h2>
+              <div><a href="/about">About Cherub</a></div>
+              <div><a href="/policies/team">Who made Cherub</a></div>
               <div><a href="/policies/scrapers">For LLMS & Scrapers</a></div>
             </div>
           </div>
