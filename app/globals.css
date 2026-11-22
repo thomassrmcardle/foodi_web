@@ -202,7 +202,7 @@ li {
 }
 
 .phone-mockup {
-  aspect-ratio: calc(16/9);
+  aspect-ratio: calc(9/16);
   max-width: 360px;
   margin-top: -96px;
 }

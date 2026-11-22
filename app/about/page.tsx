@@ -28,12 +28,17 @@ export default function Home() {
             <p>User experience is at the core of our aims. We hope to make the experience of following a recipe as easy as possible, integrating features such as timers and ingredient scaling to achieve this.</p>
 
             <h1>FAQ</h1>
-            <h2>Who can upload recipes?</h2>
+            <h2>Can I upload recipes?</h2>
             <p>Anyone with a Cherub account is able to upload their own recipes. We hope to provide this opportunity to as many as possible.</p>
             <p>However, as per our <a href="./policies/terms">Terms of Use</a>, this feature may not be available to younger users, and some users may have this capability removed if they are continuously violate our policies.</p>
             
+            <h2>Who can I see my recipes?</h2>
+            <p>You have full control over who can see your recipes! Your secret recipes can be kept as Private, or if you choose, you can choose to share your creations publically with all other users! As stated above, this option is only available for eligable users.</p>
+            <p>It's worth noting that for Public recipes, the name, description, and photo will be publically visible on the Cherub Site. You can find out more through our <a href="./policies/privacy">Privacy Policy</a>.</p>
+
             <h2>How is the platform kept safe?</h2>
             <p>The Cherub Team moderates every single recipe uploaded to the platform. This helps us ensure every public recipe lives up to our standards. Furthermore, it ensures a safe space where users can trust the quality of what they are making.</p>
+            <p>We recognise we may make mistakes, so we ask that any user who witnesses inappropriate content which violates<a href="./policies/terms">our policies</a> reports it as soon as possible.</p>
         </div>
 
 

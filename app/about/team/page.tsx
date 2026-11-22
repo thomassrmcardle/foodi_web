@@ -2,8 +2,8 @@ import Image from "next/image";
 import { Metadata } from 'next'; 
 
 export const metadata: Metadata = {
-  title: 'About Cherub',
-  description: "This document details the usage of user data on the Cherub platform. This includes what is collected, how it is used, and how you can have it modified or deleted.",
+  title: 'Thomas McArdle | Cherub',
+  description: "The creator of Cherub, Thomas McArdle created the recipe sharing platform from scratch.",
 };
 
 export default function Home() {
@@ -20,10 +20,12 @@ export default function Home() {
         <div className="max-w-3xl">
 
             <Image
-                src="https://media.licdn.com/dms/image/v2/D4E03AQHZVyDsskAOsA/profile-displayphoto-crop_800_800/B4EZ7.cX0jJUAM-/0/1782385311765?e=1796860800&v=beta&t=LrR5JUQ3_Dv3bUjZvM4iXnV4TGLfifECK5QbSgfBlZ8"
                 alt="Thomas McArdle LinkedIn profile picture"
+                src="https://avatars.githubusercontent.com/u/229652853?v=4"
                 width={100}
+                height={100}
                 className="rounded-full"
+                preload
             />
 
             <h2>Who am I?</h2>
