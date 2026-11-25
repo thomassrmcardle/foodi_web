@@ -63,7 +63,7 @@ export default function Home() {
             <Image
               className="section-img"
               alt="Cherub Recipe Under Review"
-              src="/Cherub_Logo.png"
+              src="/Cherub_Mockup.png"
               priority
               unoptimized
             />
@@ -76,7 +76,7 @@ export default function Home() {
             <Image
               className="section-img"
               alt="Cherub Recipe Under Review"
-              src="/Cherub_Logo.png"
+              src="/Cherub_Mockup.png"
               priority
               unoptimized
             />
@@ -89,7 +89,7 @@ export default function Home() {
             <Image
               className="section-img"
               alt="Cherub Recipe Under Review"
-              src="/Cherub_Logo.png"
+              src="/Cherub_Mockup.png"
               priority
               unoptimized
             />
