@@ -17,10 +17,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: 'Cherub',
-  description: "Recipes made simple. With an expansive catgeory from around the world. Find what you're craving and make it with easy.",
+  description: "Recipes made simple. With an expansive collection from around the world. Find what you're craving and make it with easy. Download today from the App Store.",
   twitter: {
     title: 'Cherub',
-    description: "Recipes made simple. With an expansive catgeory from around the world. Find what you're craving and make it with easy.",
+    description: "Recipes made simple. With an expansive collection from around the world. Find what you're craving and make it with easy. Download today from the App Store.",
   }
 };
 

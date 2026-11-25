@@ -19,7 +19,7 @@ export default function Home() {
   function DownloadLinks() {
     return <div className="flex mb-12 w-full items-center" style={{paddingTop: 16, paddingBottom: 4}}>
       <a className="app_store_button flex">
-        <IconBrandAppleFilled size={12} />
+        <IconBrandAppleFilled size={24} />
         <h4>App Store</h4>
       </a>
     </div>

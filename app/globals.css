@@ -93,7 +93,12 @@ button:hover {
   gap: 4px;
   background-color: black;
   border-radius: 12px;
-  border: rgba(255, 255, 255, 0.5) 2px;
+  align-items: center;
+  border: rgba(255, 255, 255, 0.5) 2px solid;
+  padding: 4px 12px;
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
 }
 
 input {
