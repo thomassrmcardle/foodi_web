@@ -88,6 +88,14 @@ button:hover {
   opacity: 0.75;
 }
 
+.app_store_button {
+  display: flex;
+  gap: 4px;
+  background-color: black;
+  border-radius: 12px;
+  border: rgba(255, 255, 255, 0.5) 2px;
+}
+
 input {
   background-color: var(--middleground);
   padding: 12px;
