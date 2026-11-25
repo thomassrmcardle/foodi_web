@@ -6,16 +6,6 @@ import { IconBrandAppleFilled } from '@tabler/icons-react';
 
 export default function Home() {
 
-  function Placeholder() {
-    return <Image
-      className="section-img"
-      alt="Placeholder Image"
-      src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1920px-No-Image-Placeholder.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
-      width={420}
-      height={240}
-    />
-  }
-
   function DownloadLinks() {
     return <div className="flex mb-12 w-full items-center" style={{paddingTop: 16, paddingBottom: 4}}>
       <a className="app_store_button flex">
@@ -69,27 +59,45 @@ export default function Home() {
         </div>
 
         <div className="max-w-3xl">
-          <div className="mb-12 flex flex-row flex-wrap-row gap-28">
-            <Placeholder />
+          <section className="flex flex-row flex-wrap-row gap-28">
+            <Image
+              className="section-img"
+              alt="Cherub Recipe Under Review"
+              src="/Cherub_Logo.png"
+              priority
+              unoptimized
+            />
             <div className="justify-center flex flex-col flex-1">
               <h2>Cook</h2>
               <p>With a recipe system built around cooking</p>
             </div>
-          </div>
-          <div className="mb-12 flex flex-row flex-wrap-row gap-28">
+          </section>
+          <section className="flex flex-row flex-wrap-row gap-28">
+            <Image
+              className="section-img"
+              alt="Cherub Recipe Under Review"
+              src="/Cherub_Logo.png"
+              priority
+              unoptimized
+            />
             <div className="justify-center flex flex-col flex-1">
               <h2>Discover</h2>
               <p>From a library of 100s of recipes</p>
             </div>
-            <Placeholder />
-          </div>
-          <div className="mb-12 flex flex-row flex-wrap-row gap-28">
-            <Placeholder />
+          </section>
+          <section className="flex flex-row flex-wrap-row gap-28">
+            <Image
+              className="section-img"
+              alt="Cherub Recipe Under Review"
+              src="/Cherub_Logo.png"
+              priority
+              unoptimized
+            />
             <div className="justify-center flex flex-col flex-1">
               <h2>Share</h2>
               <p>Your recipes with the world!</p>
             </div>
-          </div>
+          </section>
         </div>
 
         <DownloadLinks />

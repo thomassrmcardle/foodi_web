@@ -46,6 +46,10 @@ body {
   color: var(--foreground);
 }
 
+section {
+  margin-block: 48px;
+}
+
 footer {
   padding: 24;
   justify-content: center;
@@ -95,7 +99,7 @@ button:hover {
   border-radius: 12px;
   align-items: center;
   border: rgba(255, 255, 255, 0.5) 2px solid;
-  padding: 4px 12px;
+  padding: 8px 12px;
   text-decoration: none;
   cursor: pointer;
   color: white;
@@ -212,6 +216,8 @@ li {
 }
 
 .section-img {
+  max-height: 420px;
+  object-fit: contain;
   min-width: 200px;
 }
 
