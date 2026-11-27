@@ -56,10 +56,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
           <div className="flex-space-row">
             <div className="text-sm text-gray-500">Discover and share recipes with Cherub.</div>
-            <div className="text-sm text-gray-500">All content © Cherub {year}</div>
+            <div className="text-sm text-gray-500">Content & Media Copyright © Cherub {year}</div>
           </div>
 
           <div className="flex-wrap-row">
+            <div className="nav-column">
+              <h2>Navigation</h2>
+              <div><a href="/">Download Cherub</a></div>
+              <div><a href="/">About Cherub</a></div>
+            </div>
             <div className="nav-column">
               <h2>Our Policies</h2>
               <div><a href="/policies/terms">Terms of Use</a></div>
@@ -71,7 +76,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
             <div className="nav-column">
               <h2>Extra Info</h2>
-              <div><a href="/about">About Cherub</a></div>
+              <div><a href="/about/availability">Regional Availability</a></div>
               <div><a href="/policies/team">Who made Cherub</a></div>
               <div><a href="/policies/scrapers">For LLMS & Scrapers</a></div>
             </div>

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import { Metadata } from 'next'; 
 
-import { IconBrandAppleFilled } from '@tabler/icons-react';
+import { IconBrandAppleFilled, IconReceipt, IconStar, IconUsers } from '@tabler/icons-react';
 
 export default function Home() {
 
@@ -43,17 +43,26 @@ export default function Home() {
 
         <div className="flex flex-row w-full max-w-3xl py-16">
           <div className="flex flex-col flex-1">
-            <h2 className="text-centre">10+</h2>
+            <div className="flex">
+              <IconReceipt size={32} />
+              <h2 className="text-centre">10+</h2>
+            </div>
             <p className="text-centre">Public Recipes</p>
           </div>
           <Divider />
           <div className="flex flex-col flex-1">
-            <h2 className="text-centre">1</h2>
+            <div className="flex">
+              <IconUsers size={32} />
+              <h2 className="text-centre">1</h2>
+            </div>
             <p className="text-centre">Daily User</p>
           </div>
           <Divider />
           <div className="flex flex-col flex-1">
-            <h2 className="text-centre">3</h2>
+            <div>
+              <IconStar size={32} />
+              <h2 className="text-centre">3</h2>
+            </div>
             <p className="text-centre">Positive Reviews</p>
           </div>
         </div>
