@@ -53,9 +53,9 @@ export default function Home() {
           <div className="flex flex-col flex-1">
             <div className="flex flex-row justify-center gap-8">
               <IconUsers size={32} />
-              <h2 className="text-centre">1</h2>
+              <h2 className="text-centre">2</h2>
             </div>
-            <p className="text-centre">Daily User</p>
+            <p className="text-centre">Monthly Users</p>
           </div>
           <Divider />
           <div className="flex flex-col flex-1">
@@ -66,9 +66,9 @@ export default function Home() {
             <p className="text-centre">Positive Reviews</p>
           </div>
 
-          <p>Stats last updated November 2026</p>
-
         </div>
+
+        <p>Stats last updated November 2026</p>
 
         <div className="max-w-3xl">
           <section className="flex flex-row flex-wrap-row gap-28">
